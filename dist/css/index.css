@@ -8,6 +8,7 @@
 
 body {
   width: 100%;
+  min-width: 340px;
   min-height: 100vh;
   height: 100%;
   background-color: #d3cf05;
@@ -28,26 +29,26 @@ body {
 .weather__header {
   width: 90vw;
   max-width: 400px;
-  padding: 1rem;
 }
 
 .weather__header > form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  padding-right: 3rem !important;
   padding: 1rem;
 }
 
 .weather__header > form > input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   height: 40px;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   padding-left: 0.5rem;
   border: none;
@@ -55,7 +56,6 @@ body {
   border-bottom: 2px solid #fff;
   background-color: transparent;
   color: #fff;
-  margin-right: 0.5rem;
 }
 
 .weather__header > form > button {
@@ -63,13 +63,22 @@ body {
   border: none;
   outline: none;
   color: #fff;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.1rem;
   border-radius: 25px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   cursor: pointer;
   letter-spacing: 1px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.weather__header > form > button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #d3cf05;
+  background-color: #fff;
 }
 
 .weather__container {
@@ -110,5 +119,21 @@ body {
 .weather #weather__climate {
   font-size: 1.4rem;
   letter-spacing: 1px;
+}
+
+@media screen and (min-width: 480px) {
+  .weather__header > form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .weather__header > form > input {
+    margin-right: 0.5rem;
+  }
+  .weather__header > form > button {
+    padding: -0.5rem 1rem !important;
+    height: 40px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

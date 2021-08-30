@@ -7,17 +7,16 @@
     &__header{
         width: 90vw;
         max-width: 400px;
-        padding: 1rem;
         >form{
             display: flex;
+            flex-direction: column;
             width: 100%;
             box-sizing: border-box;
             overflow: hidden;
-            padding-right: 3rem !important;
             padding: 1rem;
             >input{
-                flex: 1;
                 height: 40px;
+                margin-bottom: 1rem;
                 font-size: 1.2rem;
                 padding-left: 0.5rem;
                 border: none;
@@ -25,19 +24,24 @@
                 border-bottom: 2px solid #fff;
                 background-color: transparent;
                 color: #fff;
-                margin-right: 0.5rem;
             }
             >button{
                 background-color: transparent;
                 border:none;
                 outline:none;
                 color: #fff;
-                padding: 0 1rem;
+                padding: 0.5rem 1rem;
                 font-size: 1.1rem;
                 border-radius: 25px;
                 box-shadow: 0 0 5px rgba(0,0,0,0.6);
                 cursor: pointer;
                 letter-spacing: 1px;
+                transition: all 0.5s ease-in-out;
+            }
+            >button:hover{
+                box-shadow: none;
+                color: rgb(211, 207, 5);
+                background-color: #fff;
             }
         }
     }
@@ -75,5 +79,20 @@
     #weather__climate{
         font-size: 1.4rem;
         letter-spacing: 1px;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .weather__header{
+        >form{
+            flex-direction: row;
+            >input{
+                margin-right: 0.5rem;
+            }
+            >button{
+                padding: -0.5rem 1rem !important;
+                height: 40px;
+            }
+        }
     }
 }
