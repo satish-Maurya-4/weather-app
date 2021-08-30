@@ -1,0 +1,79 @@
+.weather{
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: 1;
+    justify-content: center;
+
+    &__header{
+        width: 90vw;
+        max-width: 400px;
+        padding: 1rem;
+        >form{
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding-right: 3rem !important;
+            padding: 1rem;
+            >input{
+                flex: 1;
+                height: 40px;
+                font-size: 1.2rem;
+                padding-left: 0.5rem;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid #fff;
+                background-color: transparent;
+                color: #fff;
+                margin-right: 0.5rem;
+            }
+            >button{
+                background-color: transparent;
+                border:none;
+                outline:none;
+                color: #fff;
+                padding: 0 1rem;
+                font-size: 1.1rem;
+                border-radius: 25px;
+                box-shadow: 0 0 5px rgba(0,0,0,0.6);
+                cursor: pointer;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    &__container{
+        width: 90vw;
+        max-width: 400px;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    &__card{
+        width: 280px;
+        height: 300px;
+        margin: auto;
+        color: #000;
+        padding: 1rem;
+        border-radius: 25px;
+        box-shadow: 0px -10px 20px rgb(255, 255, 255);
+        background-color: #fff;
+        >h3{
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+    }
+    #location{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    #weather__image{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+    #weather__climate{
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+}

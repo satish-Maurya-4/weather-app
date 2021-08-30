@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/css/index.css" />
+  <title>Weathe App</title>
+</head>
+<body>
+  <section class="weather">
+    <div class="weather__header">
+      <form>
+        <input id="search" placeholder="Enter city name" />
+        <button  type="submit" id="search__btn">Search</button>
+      </form>
+    </div>
+    <div class="weather__container">
+      <div class="weather__card">
+        <div class="weather__city">
+          <h2 id="location">Delhi <sup id="weather__country">IN</sup></h2>
+        </div>
+        <h3><span id="weather__city--tempValue"></span> <span>&#8451;</span></h3>
+        <img src="icons/clear weather.png" alt="clear weather" id="weather__image" />
+        <h4 id="weather__climate"></h4>
+      </div>
+    </div>
+  </section>
+  <script src="index.js"></script>
+</body>
+</html>

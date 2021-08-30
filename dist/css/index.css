@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,700&display=swap");
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #d3cf05;
+  font-family: 'Nunito', sans-serif;
+}
+
+.weather {
+  padding-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1;
+      grid-template-columns: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weather__header {
+  width: 90vw;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.weather__header > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  padding-right: 3rem !important;
+  padding: 1rem;
+}
+
+.weather__header > form > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 40px;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+.weather__header > form > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.weather__container {
+  width: 90vw;
+  max-width: 400px;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.weather__card {
+  width: 280px;
+  height: 300px;
+  margin: auto;
+  color: #000;
+  padding: 1rem;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px -10px 20px white;
+          box-shadow: 0px -10px 20px white;
+  background-color: #fff;
+}
+
+.weather__card > h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.weather #location {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.weather #weather__image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.weather #weather__climate {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=index.css.map */
