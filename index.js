@@ -5,6 +5,8 @@ const loc = document.getElementById('location')
 const tempValue = document.getElementById('weather__city--tempValue')
 const climate = document.getElementById('weather__climate')
 const weatherImage = document.getElementById('weather__image')
+const weatherCountry = document.getElementById("weather__country");
+console.log(weatherCountry);
 
 searchBtn.addEventListener('click', (e) => {
   e.preventDefault()
@@ -24,10 +26,14 @@ const getWeather = async (city) => {
     const { name } = weatherData
     const { feels_like } = weatherData.main
     const { id, main } = weatherData.weather[0]
+    const { country } = weatherData.sys
 
     loc.textContent = name
     climate.textContent = main
     tempValue.textContent = Math.round(feels_like - 273)
+    weatherCountry.textContent = country
+    console.log(country)
+
 
     if (id < 300 && id >= 200) {
         weatherImage.src = './icons/weather_thunderStorm.png'
@@ -71,10 +77,13 @@ window.addEventListener('load', () => {
           const { name } = data
           const { feels_like } = data.main
           const { id, main } = data.weather[0]
+          const { country } = data.sys
 
           loc.textContent = name
           climate.textContent = main
           tempValue.textContent = Math.round(feels_like - 273);
+          weatherCountry.textContent = country;
+          console.log(country)
 
           if (id < 300 && id >= 200) {
             weatherImage.src = './icons/weather_thunderStorm.png'
